@@ -56,7 +56,7 @@ class ElasticSearchImpl(system: ExtendedActorSystem) extends ElasticSearch {
     .settings(settings)
     .node()
 
-  private val client = ElasticClient.fromNode(node)
+  val client = ElasticClient.fromNode(node)
 
   override def doIndex(indexDef: IndexDefinition): Future[IndexResponse] = {
     log.debug("Indexing: {}", indexDef)
