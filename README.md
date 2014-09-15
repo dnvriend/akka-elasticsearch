@@ -7,6 +7,12 @@ Launch the extension:
     val system = ActorSystem("MySystem")
     val elasticSearch = ElasticSearch(system)
 
+You can also register the extension in application.conf:
+
+    akka {
+        extensions = ["com.github.dnvriend.elasticsearch.extension.ElasticSearch"]
+    }
+
 
 # Execute a query
 To execute a query:

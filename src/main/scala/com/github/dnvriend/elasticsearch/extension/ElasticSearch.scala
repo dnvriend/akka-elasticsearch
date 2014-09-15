@@ -1,4 +1,4 @@
-package com.dnvriend.elasticsearch.extension
+package com.github.dnvriend.elasticsearch.extension
 
 import akka.actor.{ExtensionId, ExtensionIdProvider, Extension, ExtendedActorSystem}
 import akka.event.Logging
