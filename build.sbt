@@ -10,6 +10,8 @@ version := "1.0.0"
 
 scalaVersion := "2.11.2"
 
+crossScalaVersions := Seq("2.10.4", "2.11.2")
+
 resolvers += "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
 
 libraryDependencies ++=
