@@ -1,6 +1,13 @@
 # akka-elasticsearch
 The ElasticSearch extension for Akka
 
+# Dependency
+To include the akka-elasticsearch extension to your project, add the following lines to your build.sbt:
+ 
+    resolvers += "dnvriend at bintray" at "http://dl.bintray.com/dnvriend/maven"
+    
+    libraryDependencies += "com.github.dnvriend" %% "akka-elasticsearch" % "1.0.0"
+
 # Usage
 Launch the extension:
 
@@ -23,7 +30,6 @@ To execute a query:
     val mySearchDef = search in "orders" -> "order" sort { by field "created" order SortOrder.DESC} limit 100
     
     val response: Future[SearchResponse] = elasticSearch.doSearch(mySearchDef)
-
 
 # To index
 To index:
