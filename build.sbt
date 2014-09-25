@@ -1,8 +1,12 @@
+import bintray.Plugin._
+
+seq(bintraySettings:_*)
+
 name := "akka-elasticsearch"
 
 organization := "com.github.dnvriend"
 
-version := "1.0.0-SNAPSHOT"
+version := "1.0.0"
 
 scalaVersion := "2.11.2"
 
@@ -28,6 +32,6 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
 publishMavenStyle := true
 
-publishArtifact in Test := false
+licenses += ("Apache-2.0", url("http://opensource.org/licenses/apache2.0.php"))
 
-fork := true
+bintray.Keys.packageLabels in bintray.Keys.bintray := Seq("akka", "elasticsearch", "lucene", "cluster", "index", "indexing")
