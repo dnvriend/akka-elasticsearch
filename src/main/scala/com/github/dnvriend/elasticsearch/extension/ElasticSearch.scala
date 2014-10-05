@@ -31,6 +31,8 @@ trait ElasticSearch extends Extension {
 
   def doSearch(searchDef: SearchDefinition): Future[SearchResponse]
 
+  def client: ElasticClient
+
 }
 
 class ElasticSearchImpl(system: ExtendedActorSystem) extends ElasticSearch {
