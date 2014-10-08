@@ -41,20 +41,26 @@ class ElasticSearchImpl(system: ExtendedActorSystem) extends ElasticSearch {
 
   private val log = Logging(system, this.getClass)
 
-  private val cfg = system.settings.config
+  private val cfg = system.settings.config.getConfig("elasticsearch")
 
   private val settings = ImmutableSettings.settingsBuilder()
     .put("node.data", true)
     .put("node.client", false)
-    .put("transport.tcp.port", cfg.getInt("elasticsearch.cluster.port"))
-    .put("cluster.name", cfg.getString("elasticsearch.cluster.name"))
-    .put("http.port", cfg.getInt("elasticsearch.http.port"))
-    .put("http.enabled", cfg.getBoolean("elasticsearch.http.enabled"))
-    .put("path.home", cfg.getString("elasticsearch.path.home"))
+    .put("transport.tcp.port", cfg.getInt("cluster.port"))
+    .put("cluster.name", cfg.getString("cluster.name"))
+    .put("http.port", cfg.getInt("http.port"))
+    .put("http.enabled", cfg.getBoolean("http.enabled"))
+    .put("path.home", cfg.getString("path.home"))
     .put("es.logger.level", "DEBUG")
+    .put("indices.fielddata.cache.size", cfg.getString("memory.indices.fielddata.cache.size"))
+    .put("indices.breaker.fielddata.limit", cfg.getString("memory.indices.breaker.fielddata.limit"))
+    .put("indices.breaker.request.limit", cfg.getString("memory.indices.breaker.request.limit"))
+    .put("indices.breaker.total.limit", cfg.getString("memory.indices.breaker.total.limit"))
+    .put("es.index.store.type", cfg.getString("index.store.type"))
+
 
   private val node = NodeBuilder.nodeBuilder()
-    .clusterName(cfg.getString("elasticsearch.cluster.name"))
+    .clusterName(cfg.getString("cluster.name"))
     .settings(settings)
     .node()
 
