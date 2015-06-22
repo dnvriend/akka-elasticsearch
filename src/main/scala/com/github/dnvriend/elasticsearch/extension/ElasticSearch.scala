@@ -2,7 +2,7 @@ package com.github.dnvriend.elasticsearch.extension
 
 import akka.actor.{ExtensionId, ExtensionIdProvider, Extension, ExtendedActorSystem}
 import akka.event.Logging
-import com.sksamuel.elastic4s.{ElasticDsl, IndexDefinition, ElasticClient}
+import com.sksamuel.elastic4s.{SearchDefinition, ElasticDsl, IndexDefinition, ElasticClient}
 import com.sksamuel.elastic4s.ElasticDsl._
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse
@@ -71,7 +71,7 @@ class ElasticSearchImpl(system: ExtendedActorSystem) extends ElasticSearch {
     client.execute(indexDef)
   }
 
-  override def doSearch(searchDef: ElasticDsl.SearchDefinition): Future[SearchResponse] = {
+  override def doSearch(searchDef: SearchDefinition): Future[SearchResponse] = {
     log.debug("Searching: {}", searchDef)
     client.execute(searchDef)
   }
