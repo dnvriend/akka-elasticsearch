@@ -1,7 +1,9 @@
 # akka-elasticsearch
 An ElasticSearch extension for Akka. The extension registers a single instance of the elasticsearch client as node,
 that can be configured by an `application.conf` that points to a `elasticsearch.yml` file. Using docker containers
-the `elasticsearch.yml` can be loaded from the file system, url or classpath.
+the `elasticsearch.yml` can be loaded from the file system, url or classpath. The extension makes use of the work
+done by [Stephen Samuel](https://github.com/sksamuel), many thanks to him and the committers of 
+[elastic4s - Elasticsearch Scala Client](https://github.com/sksamuel/elastic4s), thanks thanks thanks!!
 
 [![License](http://img.shields.io/:license-Apache%202-red.svg)](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
@@ -13,6 +15,13 @@ resolvers += "dnvriend at bintray" at "http://dl.bintray.com/dnvriend/maven"
 
 libraryDependencies += "com.github.dnvriend" %% "akka-elasticsearch" % "1.0.4"
 ```
+
+# What's new?
+
+### v1.0.4 (2015-07-06)
+  - Took the project out of the mothballs, using it in production,
+  - Loading config from classpath, directory or url,
+  - Updated the dependency to "com.sksamuel.elastic4s" %% "elastic4s-core" % "1.6.0" which depends on ElasticSearch 1.6,                                     
 
 # Usage
 Launch the extension:
