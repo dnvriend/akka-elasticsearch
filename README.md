@@ -3,6 +3,8 @@ An ElasticSearch extension for Akka. The extension registers a single instance o
 that can be configured by an `application.conf` that points to a `elasticsearch.yml` file. Using docker containers
 the `elasticsearch.yml` can be loaded from the file system, url or classpath.
 
+[![License](http://img.shields.io/:license-Apache%202-red.svg)](http://www.apache.org/licenses/LICENSE-2.0.txt)
+
 # Dependency
 To include the akka-elasticsearch extension to your project, add the following lines to your build.sbt:
  
