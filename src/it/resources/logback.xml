@@ -1,0 +1,28 @@
+<configuration>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>debug</level>
+        </filter>
+        <encoder>
+            <pattern>%date{HH:mm:ss.SSS} %-5level [%-50.50logger] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="akka.actor" level="debug" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+
+    <logger name="org.apache.camel" level="warn" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+
+    <logger name="org.elasticsearch" level="info" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+
+</configuration>

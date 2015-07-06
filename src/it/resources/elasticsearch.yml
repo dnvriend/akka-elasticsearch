@@ -1,0 +1,13 @@
+node.name: "acme-node"
+cluster.name: "acme-cluster"
+cluster.port: 9300
+http.enabled: true
+http.port: 9200
+transport.tcp.port: 9300
+path.home: "target/elasticsearch"
+store.type: "niofs"
+bootstrap.mlockall: true
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+http.cors.allow-methods: "OPTIONS,HEAD,GET,POST,PUT,DELETE"
+http.cors.allow-headers: "X-Requested-With,X-Auth-Token,Content-Type,Content-Length"
