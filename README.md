@@ -5,6 +5,7 @@ the `elasticsearch.yml` can be loaded from the file system, url or classpath. Th
 done by [Stephen Samuel](https://github.com/sksamuel), many thanks to him and the committers of 
 [elastic4s - Elasticsearch Scala Client](https://github.com/sksamuel/elastic4s), thanks thanks thanks!!
 
+[![Build Status](https://travis-ci.org/dnvriend/akka-elasticsearch.svg?branch=master)](https://travis-ci.org/dnvriend/akka-elasticsearch)
 [![License](http://img.shields.io/:license-Apache%202-red.svg)](http://www.apache.org/licenses/LICENSE-2.0.txt)
 
 # Dependency
