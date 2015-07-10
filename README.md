@@ -7,6 +7,7 @@ done by [Stephen Samuel](https://github.com/sksamuel), many thanks to him and th
 
 [![Build Status](https://travis-ci.org/dnvriend/akka-elasticsearch.svg?branch=master)](https://travis-ci.org/dnvriend/akka-elasticsearch)
 [![License](http://img.shields.io/:license-Apache%202-red.svg)](http://www.apache.org/licenses/LICENSE-2.0.txt)
+[![Coverage Status](https://coveralls.io/repos/dnvriend/akka-elasticsearch/badge.svg?branch=master&service=github)](https://coveralls.io/github/dnvriend/akka-elasticsearch?branch=master)
 
 # Dependency
 To include the akka-elasticsearch extension to your project, add the following lines to your build.sbt:
