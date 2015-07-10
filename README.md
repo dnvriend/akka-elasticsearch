@@ -19,10 +19,14 @@ libraryDependencies += "com.github.dnvriend" %% "akka-elasticsearch" % "1.0.4"
 
 # What's new?
 
+### v1.0.5 (2015-07-10)
+  - akka v2.3.11 -> v2.3.12
+  - elastic4s v1.6.0 -> v1.6.4
+
 ### v1.0.4 (2015-07-06)
   - Took the project out of the mothballs, using it in production,
   - Loading config from classpath, directory or url,
-  - Updated the dependency to "com.sksamuel.elastic4s" %% "elastic4s-core" % "1.6.0" which depends on ElasticSearch 1.6,                                     
+  - elastic4s v1.3.2 -> v1.6.0                                   
 
 # Usage
 Launch the extension:
