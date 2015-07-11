@@ -2,7 +2,7 @@ name := "akka-elasticsearch"
 
 organization := "com.github.dnvriend"
 
-version := "1.0.5"
+version := "1.0.6"
 
 scalaVersion := "2.11.7"
 
@@ -10,9 +10,7 @@ libraryDependencies ++= {
   val akkaVersion = "2.3.12"
   Seq(
     "com.typesafe.akka"      %% "akka-actor"     % akkaVersion,
-    "com.sksamuel.elastic4s" %% "elastic4s-core" % "1.6.4",
-    "com.typesafe.akka"      %% "akka-slf4j"     % akkaVersion % "test,it",
-    "ch.qos.logback"         % "logback-classic" % "1.1.2",
+    "com.sksamuel.elastic4s" %% "elastic4s-core" % "1.6.5",
     "org.scalatest"          %% "scalatest"      % "2.2.4" % "test,it"
   )
 }

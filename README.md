@@ -20,6 +20,9 @@ libraryDependencies += "com.github.dnvriend" %% "akka-elasticsearch" % "1.0.4"
 
 # What's new?
 
+### v1.0.6 (2015-07-11)
+  - elastic4s v1.6.4 -> v1.6.5
+
 ### v1.0.5 (2015-07-10)
   - akka v2.3.11 -> v2.3.12
   - elastic4s v1.6.0 -> v1.6.4
